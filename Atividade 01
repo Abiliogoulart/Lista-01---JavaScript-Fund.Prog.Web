@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 1 - Par ou Ímpar</title>
+</head>
+<body>
+    <h1>Verificar Par ou Ímpar</h1>
+    <p id="resultado">Aguardando entrada...</p>
+
+    <script>
+        const numeroStr = prompt("Digite um número para verificar se é par ou ímpar:");
+        const numero = parseInt(numeroStr); 
+        let mensagemSaida = "";
+
+        if (isNaN(numero)) {
+            mensagemSaida = "Entrada inválida. Por favor, digite um número.";
+        } else {
+
+            if (numero % 2 === 0) {
+                mensagemSaida = `O número ${numero} é par.`; 
+            } else {
+                mensagemSaida = `O número ${numero} é ímpar.`;
+            }
+        }
+
+        document.getElementById('resultado').innerHTML = mensagemSaida;
+    </script>
+</body>
+</html>
