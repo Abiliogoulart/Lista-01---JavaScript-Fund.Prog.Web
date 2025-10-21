@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 5 - Mudar Cor de Fundo</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 5 - Mudar Cor de Fundo</h1>
+    
+    <p>Clique nos botões para mudar a cor de fundo da página.</p>
+
+    <button type="button" onclick="mudarCor('red')">Mudar para Vermelho</button> 
+    <button type="button" onclick="mudarCor('blue')">Mudar para Azul</button>    
+    <button type="button" onclick="mudarCor('white')">Redefinir para Branco</button> 
+
+    <script>
+        function mudarCor(novaCor) {
+            document.body.style.backgroundColor = novaCor;
+        }
+    </script>
+</body>
+</html>
