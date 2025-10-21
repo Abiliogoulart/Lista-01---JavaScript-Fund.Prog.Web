@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 3 - Palíndromo</title>
+</head>
+<body>
+    <h1>Verificar Palíndromo</h1>
+    <p id="resultado">Aguardando entrada...</p>
+
+    <script>
+        const palavraOriginal = prompt("Digite uma palavra para verificar se é um palíndromo:").toLowerCase().trim();
+        let mensagemSaida = "";
+
+        if (!palavraOriginal) {
+            mensagemSaida = "Nenhuma palavra foi digitada.";
+        } else {
+            const palavraInvertida = palavraOriginal.split('').reverse().join('');
+
+            if (palavraOriginal === palavraInvertida) {
+                mensagemSaida = `A palavra **${palavraOriginal}** é um palíndromo.`;
+            } else {
+                mensagemSaida = `A palavra **${palavraOriginal}** não é um palíndromo.`;
+            }
+        }
+
+        document.getElementById('resultado').innerHTML = mensagemSaida;
+    </script>
+</body>
+</html>
