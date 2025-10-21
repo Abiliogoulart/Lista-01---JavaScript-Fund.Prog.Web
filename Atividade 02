@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 2 - Status de Voto</title>
+</head>
+<body>
+    <h1>Verificação de Voto</h1>
+    <p id="resultado">Aguardando entrada...</p>
+
+    <script>
+        const idadeStr = prompt("Digite a idade da pessoa:");
+        const idade = parseInt(idadeStr);
+        let statusVoto = "";
+
+        if (isNaN(idade) || idade < 0) {
+            statusVoto = "Entrada inválida. Por favor, digite uma idade válida.";
+        } else {
+
+            if (idade < 16) {
+                statusVoto = "Voto não permitido"; 
+            } 
+            else if (idade >= 18 && idade <= 70) {
+                statusVoto = "Voto obrigatório";
+            } 
+            else { 
+                statusVoto = "Voto facultativo"; 
+            }
+        }
+        document.getElementById('resultado').innerHTML = `Idade: ${idade} anos. Resultado: **${statusVoto}**`;
+    </script>
+</body>
+</html>
